@@ -79,5 +79,7 @@ mysql -uroot -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 
 mysql -uroot -proot -e "CREATE DATABASE my_database";
 
 echo "-- Install symfony apache pack --"
-cd /vagrant_data/$projectname
-yes y | composer require symfony/apache-pack
+#cd /vagrant_data/$projectname
+#yes y | composer require symfony/apache-pack
+cd /vagrant
+cp .htaccess /vagrant_data/$projectname/public
